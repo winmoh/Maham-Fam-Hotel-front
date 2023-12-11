@@ -33,3 +33,11 @@ export async function getAllRooms  (){
     }
 
 }
+export async function getAllRoomTypes(){
+    try {
+        const response=api.get("/room/getAllRoomTypes")
+        return response.data;
+    }catch(error){
+     throw new Error("ther was a problem while retreiving room types" )
+    }
+}
